@@ -1,0 +1,234 @@
+[
+  {
+    "image": "/breakfast/shakshouka.jpg",
+    "title": "Shakshouka",
+    "description": "Poached eggs in a rich tomato and pepper sauce.",
+    "price": "9.50",
+    "ingredients": ["eggs", "tomatoes", "bell peppers", "onion", "spices"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/breakfast/pancakes.jpg",
+    "title": "Pancakes with blueberries",
+    "description": "Fluffy pancakes topped with fresh blueberries.",
+    "price": "8.00",
+    "ingredients": ["flour", "milk", "eggs", "blueberries", "maple syrup"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/breakfast/full_english.jpg",
+    "title": "Full English",
+    "description": "Classic hearty English breakfast plate.",
+    "price": "11.00",
+    "ingredients": ["eggs", "bacon", "sausages", "beans", "toast"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/breakfast/musli.jpg",
+    "title": "Musli",
+    "description": "Healthy cereal mix with fruit and nuts.",
+    "price": "6.50",
+    "ingredients": ["oats", "nuts", "dried fruit", "yogurt"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/breakfast/eggs.jpg",
+    "title": "Sunny side up",
+    "description": "Eggs fried sunny side up, simple and classic.",
+    "price": "5.00",
+    "ingredients": ["eggs", "butter", "salt"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/breakfast/sandwich.png",
+    "title": "Sandwiches",
+    "description": "Freshly made breakfast sandwiches.",
+    "price": "7.00",
+    "ingredients": ["bread", "cheese", "ham", "vegetables"],
+    "category": "breakfast"
+  },
+  {
+    "image": "/lunch/bibimbap.jpg",
+    "title": "Bibimbap",
+    "description": "Korean rice bowl with vegetables and egg.",
+    "price": "12.50",
+    "ingredients": ["rice", "vegetables", "egg", "gochujang"],
+    "category": "lunch"
+  },
+  {
+    "image": "/lunch/ceasar_salad.jpg",
+    "title": "Ceasar's salad",
+    "description": "Crisp romaine with creamy Caesar dressing.",
+    "price": "9.00",
+    "ingredients": ["romaine", "croutons", "parmesan", "caesar dressing"],
+    "category": "lunch"
+  },
+  {
+    "image": "/lunch/fish_with_salad.jpg",
+    "title": "Fish with salad",
+    "description": "Grilled fish served with fresh salad.",
+    "price": "13.00",
+    "ingredients": ["fish", "mixed greens", "lemon", "olive oil"],
+    "category": "lunch"
+  },
+  {
+    "image": "/lunch/greek_salad.jpg",
+    "title": "Greek salad",
+    "description": "Refreshing salad with feta and olives.",
+    "price": "8.50",
+    "ingredients": ["tomatoes", "cucumber", "feta", "olives"],
+    "category": "lunch"
+  },
+  {
+    "image": "/lunch/kebap.jpg",
+    "title": "Kebap",
+    "description": "Grilled meat served with spices and sauce.",
+    "price": "11.50",
+    "ingredients": ["grilled meat", "spices", "flatbread"],
+    "category": "lunch"
+  },
+  {
+    "image": "/lunch/panini.jpg",
+    "title": "Panini",
+    "description": "Warm pressed sandwich with melted cheese.",
+    "price": "8.50",
+    "ingredients": ["bread", "cheese", "ham", "vegetables"],
+    "category": "lunch"
+  },
+  {
+    "image": "/desserts/mille_feuille.jpg",
+    "title": "Strawberry Mille-feuille",
+    "description": "Layered pastry with cream and strawberries.",
+    "price": "6.50",
+    "ingredients": ["puff pastry", "cream", "strawberries"],
+    "category": "desserts"
+  },
+  {
+    "image": "/desserts/tiramisu.jpg",
+    "title": "Tiramisu",
+    "description": "Classic Italian coffee-flavored dessert.",
+    "price": "6.00",
+    "ingredients": ["mascarpone", "coffee", "ladyfingers", "cocoa"],
+    "category": "desserts"
+  },
+  {
+    "image": "/desserts/chocolate_parfait.jpg",
+    "title": "Chocolate Parfait",
+    "description": "Rich layered chocolate dessert.",
+    "price": "5.50",
+    "ingredients": ["chocolate", "cream", "cookies"],
+    "category": "desserts"
+  },
+  {
+    "image": "/desserts/strawberry_crepes.jpg",
+    "title": "Strawberry Crepes",
+    "description": "Thin crepes filled with strawberries.",
+    "price": "6.00",
+    "ingredients": ["crepes", "strawberries", "cream"],
+    "category": "desserts"
+  },
+  {
+    "image": "/desserts/chocolate_ice.jpg",
+    "title": "Chocolate cake with ice cream",
+    "description": "Warm chocolate cake with vanilla ice cream.",
+    "price": "7.00",
+    "ingredients": ["chocolate cake", "vanilla ice cream"],
+    "category": "desserts"
+  },
+  {
+    "image": "/dinner/fish_and_fries.jpg",
+    "title": "Fish and Fries",
+    "description": "Crispy fried fish with golden fries.",
+    "price": "14.00",
+    "ingredients": ["fish", "potatoes", "batter"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/golobki.jpg",
+    "title": "Gołąbki",
+    "description": "Cabbage rolls stuffed with meat and rice.",
+    "price": "13.50",
+    "ingredients": ["cabbage", "meat", "rice", "tomato sauce"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/hungarian_goulash.jpg",
+    "title": "Goulash",
+    "description": "Slow-cooked stew with paprika and beef.",
+    "price": "14.50",
+    "ingredients": ["beef", "onion", "paprika", "potatoes"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/penne_alla_vodka.png",
+    "title": "Penne alla vodka",
+    "description": "Creamy tomato pasta with a vodka kick.",
+    "price": "12.00",
+    "ingredients": ["penne", "tomato sauce", "cream", "vodka"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/pierogi.jpg",
+    "title": "Pierogi",
+    "description": "Traditional filled dumplings, pan-fried.",
+    "price": "11.50",
+    "ingredients": ["dumpling dough", "potatoes", "cheese"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/ramen.jpg",
+    "title": "Ramen",
+    "description": "Japanese noodle soup with rich broth.",
+    "price": "13.00",
+    "ingredients": ["noodles", "broth", "pork", "egg"],
+    "category": "dinner"
+  },
+  {
+    "image": "/dinner/schnitzel.jpg",
+    "title": "Schnitzel",
+    "description": "Breaded cutlet fried until golden.",
+    "price": "14.00",
+    "ingredients": ["meat cutlet", "breadcrumbs", "egg"],
+    "category": "dinner"
+  },
+  {
+    "image": "/drinks/kombucha.jpg",
+    "title": "Kombucha",
+    "description": "Refreshing fermented tea drink.",
+    "price": "4.50",
+    "ingredients": ["fermented tea", "natural flavors"],
+    "category": "drinks"
+  },
+  {
+    "image": "/drinks/coffee.jpg",
+    "title": "Coffee",
+    "description": "Freshly brewed hot coffee.",
+    "price": "3.00",
+    "ingredients": ["coffee beans", "water"],
+    "category": "drinks"
+  },
+  {
+    "image": "/drinks/tea.jpg",
+    "title": "Tea",
+    "description": "Hot tea with a soothing aroma.",
+    "price": "2.50",
+    "ingredients": ["tea leaves", "water"],
+    "category": "drinks"
+  },
+  {
+    "image": "/drinks/beer.jpg",
+    "title": "Beer",
+    "description": "Chilled locally brewed beer.",
+    "price": "5.00",
+    "ingredients": ["barley", "hops", "yeast", "water"],
+    "category": "drinks"
+  },
+  {
+    "image": "/drinks/water.jpg",
+    "title": "Water",
+    "description": "Still mineral water, served cold.",
+    "price": "2.00",
+    "ingredients": ["mineral water"],
+    "category": "drinks"
+  }
+]

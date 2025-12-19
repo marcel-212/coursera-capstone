@@ -1,14 +1,534 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Markazi+Text:wght@400..700&display=swap');
+
+$white: #EDEFEE;
+$dark: #333;
+$green: #495E57;
+$yellow: #F4CE14 ;
+$orange: #EE9972;
+$red: tomato;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4,h5{
+  letter-spacing: 2px;
+  font-family: "DM Serif Display", serif;
+  font-style: normal;
+}
+
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size: 28px;
+}
+h3{
+  font-size: 22px;
+  font-weight: normal;
+}
+h4{
+  font-size: 20px;
+}
+h5{
+  font-size: 16px;  
+}
+
+
+.shadow{
+  box-shadow: 2px 2px 8px 2px #33333330;
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: $dark;
+  background-color: $white;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+.box{
+  max-width: 1240px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+header{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: $white;
+  letter-spacing: 2px;
+  font-size: 20px;
+  
+  img{
+    width: 180px;
+  }
+}
+
+nav{
+  display: flex;
+  gap: 1rem;
+
+  .active{
+    background-color: $green;
+    color: $yellow;
+    opacity: 1;
+
+    &:hover{
+      opacity: 0.8;
+      background-color: $green;
+    }
+  }
+
+  a{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.8;
+    padding: 0.5rem 1.5rem;
+    border-radius: 12px;
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+
+    &:hover{
+      opacity: 1;
+      background-color: #33333308;
+    } 
+  }
+}
+
+.hero{
+  background-color: $green;
+  color: $white;
+  padding: 2rem 0;
+
+  .box{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+    align-items: top;
+  }
+
+  h1{
+    color: $yellow;
+  }
+  h3{
+    margin-top: -10px;
+    padding-bottom: 12px;
+    color: $yellow;
+  }
+
+  &-image{
+    aspect-ratio: 1/1;
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 12px;
+
+    img{
+      width: 120%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center;
+
+    }
+  }
+
+  article{
+    max-width: 380px;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    
+    p{
+      margin-top: auto;
+      letter-spacing: 2px;
+      font-size: 26px;
+      color: $white;
+    }
+  }
+}
+
+.highlights{
+  .box{
+    padding: 3rem;  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+.card-menu{
+  max-width: 380px;
+  overflow: hidden;
+  border-radius: 12px;
+  color: $dark;
+  text-align: centers;
+
+  &-image{
+    width: 100%;  
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+
+    img{
+      width: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+
+  &-info{
+    position: relative;
+    top: -24px;
+    background-color: $white;
+    border-radius: 12px;
+    padding: 1rem;
+    padding-bottom: 0;
+
+    .description{
+      letter-spacing: 1px;
+      margin: 4px 0;
+      min-height: 160px;
+    }
+
+    .ingredients{
+      border-top: $dark 1px solid;
+      padding: 2px 0;
+    }
+
+    .price{
+      padding: 0 12px;
+      color: $orange;
+      font-family: "DM Serif Display", serif;
+      font-size: 32px;
+      text-align: right;
+    }
+  }
+
+  
+}
+
+.testimonials{
+  background-color: $green;
+
+  .box{
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    grid-template-rows: 1fr 1fr;
+    row-gap: 4rem;
+    column-gap: 1rem;
+  }
+}
+
+.testimonial-card{
+  padding: 1rem;
+  background-color: $white;
+  border-radius: 12px;
+
+  div{
+    display: flex;
+    justify-content: start;
+    align-items: top;
+    padding-bottom: 1rem;
+    gap: 1rem;
+
+    img{
+      border: 2px solid $yellow;
+      border-radius: 12px;
+      width: 64px;
+    }
+  }
+
+  p{
+    font-size: 14px;
+  }
+}
+
+
+.about{
+  padding: 2rem 0rem 1rem 0rem;
+  .box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  &-image{
+    padding: 2rem;
+    position: relative;
+
+    &_front{
+      position: absolute;
+      top: 4rem;
+      left: 0rem;
+    }
+    &_back{
+      position: relative;
+      top: -3rem;
+      left: 6rem;
+    }
+  }
+  article{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+
+    h1{
+      color: $orange;
+    }
+    h3{
+      color: $orange;
+      margin-top: -16px;
+    }
+    p{
+      font-size: 18px;
+      margin-top: auto;
+      letter-spacing: 1px;
+    }
+  }
+
+  img{
+    border-radius: 12px;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+  }
+}
+
+#root{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer{
+  margin-top: auto;
+  background-color: $green;
+  section{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: top;
+    justify-content: end;
+    padding: 2rem;
+
+    > div{
+    display: flex;
+    column-gap: 8rem;
+
+      >div{
+        p{
+          color: $yellow;
+          font-weight: bold;
+          font-family: "DM Serif Display", serif;
+          letter-spacing: 1px;
+          font-size: 18px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      ul{
+        list-style: none;
+
+        li{
+          margin-top: 0.25rem;
+
+        }
+        li, a{
+          display: flex;
+          align-items: center;
+          justify-content: start;
+          gap: 0.25rem;
+          color: $white;
+        }
+
+        a:hover{
+          color: #333;
+        }
+      }
+    }
+  }
+}
+
+.menu{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 2rem 0; 
+  text-align: center;
+
+  &-list{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    row-gap: 4rem;
+  }
+}
+
+.radio-list{
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.radio{
+  margin-top: 1rem;
+  label{
+    padding: 0.5rem 1rem;
+    border: 2px solid $dark;
+    border-radius: 12px;
+    cursor: pointer;
+    color: $dark;
+    opacity: 0.8;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  input[type='radio']{
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  input[type='radio']:checked + label{
+    opacity: 1;
+    color: $orange;
+    border-color: $orange;
+  }
+}
+
+.reservation{
+  padding: 2rem;
+  .box{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  form{
+    margin: 0 auto;
+    width: 100%;
+    max-width: 760px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    >div{
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    input[type='text'],input[type='email'],input[type='number'],input[type='tel'],input[type='date']{
+      font-size: 22px !important;
+      width: 100%;
+      padding: 0.5rem;
+      color: $dark;
+      border: 3px solid $dark;
+      border-radius: 12px;
+      background-color: $white;
+      text-align: center;
+      font-family: "DM Serif Display", serif;
+      letter-spacing: 2px;
+
+      &:active, &:focus{
+        outline: none;
+        border-color: $orange;
+        color: $orange;
+      }
+    }
+
+    input[type='submit']{
+      padding: 0.75rem;
+      font-size: 22px;
+      letter-spacing: 2px;
+      color: $white;
+      background-color: $dark;
+      border-radius: 12px;
+      cursor: pointer;
+      border: none;
+
+      &:hover{
+        opacity: 0.8;
+      }
+
+      &:active{
+        background-color: $orange;
+        opacity: 1;
+      }
+    }
+  }
+}
+.select{
+  position: relative;
+  .select-btn{
+    width: 100%;
+    border: 3px solid #333;
+    padding: 0.75rem;
+    font-size: 22px;
+    background-color: $white;
+    border-radius: 12px;
+    color: $dark;
+
+    &:hover{
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+    
+  }
+}
+.open{
+  border-color: $orange;
+  color: $orange;
+}
+
+.select-dropdown{
+  position: absolute !important;top: 100%;
+  z-index: 88888;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid $dark;
+}
+
+.select-option{
+  font-size: 22px;
+  padding: 0.5rem;
+  background-color: $white;
+  cursor: pointer;
+  &:hover{
+    color: $orange;
+  }
 }

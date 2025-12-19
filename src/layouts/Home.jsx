@@ -1,8 +1,16 @@
+import Hero from '../sections/Hero'
+import Highlights from '../sections/Highlights'
+import Testimonials from '../sections/Testimonials'
+import About from '../sections/About'
+
 const Home = () => {
     return ( 
-        <section>
-            Home
-        </section>
+        <>
+            <Hero/>
+            <Highlights/>
+            <Testimonials/>
+            <About/>
+        </>
      );
 }
  

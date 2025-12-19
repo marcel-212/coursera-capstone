@@ -6,6 +6,7 @@ import App from './App';
 import Home from './layouts/Home';
 import Menu from './layouts/Menu';
 import NotFound from './layouts/NotFound';
+import Reservation from "./layouts/Reservation";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { index: true, element: <Home /> },
       { path: "menu", element: <Menu />},
+      { path: "reservation", element: <Reservation/>},
       { path: "*", element: <NotFound />}
     ]
   }

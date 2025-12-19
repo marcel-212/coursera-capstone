@@ -1,14 +1,17 @@
 import { NavLink } from 'react-router';
-//import logo from '../assets/images/logo.svg';
+import logo from '../assets/Logo .svg';
+import { FaHome, FaCalendarAlt } from "react-icons/fa";
+import { MdRestaurantMenu } from "react-icons/md";
+
 
 const Navbar = () => {
     return ( 
         <header>
-            <NavLink to={`/`}><img src='#' alt='Little Lemon logo'/></NavLink>
+            <NavLink to={`/`}><img src={logo} alt='Little Lemon logo'/></NavLink>
             <nav>
-                <NavLink to={`/`}>Home</NavLink>
-                <NavLink to={`/menu`}>Menu</NavLink>
-                <NavLink to={`/reservation`}>Resrvation</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active" : ''} to={`/`}><FaHome/> Home</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active" : ''} to={`/menu`}><MdRestaurantMenu/> Menu</NavLink>
+                <NavLink className={({isActive}) => isActive ? "active" : ''} to={`/reservation`}><FaCalendarAlt/> Reservation</NavLink>
             </nav>
         </header>
      );

@@ -1,74 +1,107 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Markazi+Text:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 $white: #EDEFEE;
 $dark: #333;
 $green: #495E57;
-$yellow: #F4CE14 ;
+$yellow: #F4CE14;
 $orange: #EE9972;
 $red: tomato;
 
-*{
+$font-sans: "Karla", sans-serif;
+$font-serif: "DM Serif Display", serif;
+
+$fs-h1: 48px;
+$fs-h2: 28px;
+$fs-h3: 22px;
+$fs-h4: 20px;
+$fs-h5: 16px;
+$fs-p: 16px;
+
+$box-max-width: 1240px;
+$box-padding: 2rem;
+$card-radius: 12px;
+$shadow: 2px 2px 8px 2px #33333330;
+
+// -------------------------------
+// GLOBAL RESET
+// -------------------------------
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-sans;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
 }
 
-h1,h2,h3,h4,h5{
+h1, h2, h3, h4, h5 {
   letter-spacing: 2px;
-  font-family: "DM Serif Display", serif;
+  font-family: $font-serif;
   font-style: normal;
-}
-
-h1{
-  font-size: 48px;
-}
-h2{
-  font-size: 28px;
-}
-h3{
-  font-size: 22px;
   font-weight: normal;
 }
-h4{
-  font-size: 20px;
-}
-h5{
-  font-size: 16px;  
+
+h1 { font-size: $fs-h1; }
+h2 { font-size: $fs-h2; }
+h3 { font-size: $fs-h3; }
+h4 { font-size: $fs-h4; }
+h5 { font-size: $fs-h5; }
+
+p {
+  font-size: $fs-p;
+  letter-spacing: 1px;
+  color: $dark;
 }
 
-
-.shadow{
-  box-shadow: 2px 2px 8px 2px #33333330;
+// -------------------------------
+// UTILITY CLASSES
+// -------------------------------
+.shadow {
+  box-shadow: $shadow;
 }
 
+.box {
+  max-width: $box-max-width;
+  padding: $box-padding;
+  margin: 0 auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// -------------------------------
+// ROOT
+// -------------------------------
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
   color-scheme: light dark;
   color: $dark;
   background-color: $white;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
 }
 
-.box{
-  max-width: 1240px;
-  padding: 2rem;
-  margin: 0 auto;
-}
-
-header{
+// -------------------------------
+// HEADER & NAV
+// -------------------------------
+header {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
@@ -79,316 +112,398 @@ header{
   padding: 1rem;
   background-color: $white;
   letter-spacing: 2px;
-  font-size: 20px;
-  
-  img{
-    width: 180px;
+  font-size: $fs-h5;
+
+  img { 
+    width: 180px; 
+  }
+
+  @media(max-width: 860px){
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
   }
 }
 
-nav{
+nav {
   display: flex;
   gap: 1rem;
 
-  .active{
+  .active {
     background-color: $green;
     color: $yellow;
     opacity: 1;
 
-    &:hover{
-      opacity: 0.8;
-      background-color: $green;
-    }
+    &:hover { opacity: 0.8; }
   }
 
-  a{
+  a {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     opacity: 0.8;
     padding: 0.5rem 1.5rem;
-    border-radius: 12px;
-    font-family: "DM Serif Display", serif;
-    font-style: normal;
+    border-radius: $card-radius;
+    font-family: $font-serif;
 
-    &:hover{
+    &:hover {
       opacity: 1;
       background-color: #33333308;
-    } 
+    }
+  }
+  @media(max-width: 860px){
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 
-.hero{
+// -------------------------------
+// HERO SECTION
+// -------------------------------
+.hero {
   background-color: $green;
   color: $white;
   padding: 2rem 0;
 
-  .box{
+  .box {
     display: flex;
     gap: 2rem;
     justify-content: space-evenly;
-    align-items: top;
+    align-items: flex-start;
   }
 
-  h1{
-    color: $yellow;
-  }
-  h3{
-    margin-top: -10px;
-    padding-bottom: 12px;
-    color: $yellow;
-  }
+  h1, h3 { color: $yellow; }
+  h3 { margin-top: -10px; padding-bottom: 12px; }
 
-  &-image{
+  &-image {
     aspect-ratio: 1/1;
     max-width: 380px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: $card-radius;
 
-    img{
+    img {
       width: 120%;
       aspect-ratio: 1/1;
       object-fit: cover;
       object-position: center;
-
     }
   }
 
-  article{
+  article {
     max-width: 380px;
     aspect-ratio: 1/1;
     display: flex;
     flex-direction: column;
-    
-    p{
+
+    p {
       margin-top: auto;
-      letter-spacing: 2px;
       font-size: 26px;
       color: $white;
     }
   }
-}
 
-.highlights{
-  .box{
-    padding: 3rem;  
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+  @media(max-width: 860px){
+    .box{
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      text-align: center; 
+    }
   }
 }
 
-.card-menu{
+// -------------------------------
+// HIGHLIGHTS & CARDS
+// -------------------------------
+.highlights .box {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+
+  @media(max-width: 1200px){
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    justify-items: center;
+  }
+
+  @media(max-width: 860px){
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-menu {
   max-width: 380px;
   overflow: hidden;
-  border-radius: 12px;
+  border-radius: $card-radius;
   color: $dark;
-  text-align: centers;
+  text-align: center;
 
-  &-image{
-    width: 100%;  
+  &-image {
+    width: 100%;
     height: 220px;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: $card-radius;
 
-    img{
+    img {
       width: 100%;
       object-fit: cover;
-      object-position: center center;
+      object-position: center;
     }
   }
 
-  &-info{
+  @media(max-width: 1200px){
+    max-width: 480px;
+  }
+
+  &-info {
     position: relative;
     top: -24px;
     background-color: $white;
-    border-radius: 12px;
+    border-radius: $card-radius;
     padding: 1rem;
     padding-bottom: 0;
 
-    .description{
-      letter-spacing: 1px;
-      margin: 4px 0;
-      min-height: 160px;
-    }
-
-    .ingredients{
-      border-top: $dark 1px solid;
-      padding: 2px 0;
-    }
-
-    .price{
+    .description { min-height: 160px; }
+    .ingredients { border-top: 1px solid $dark; padding: 2px 0; }
+    .price {
       padding: 0 12px;
       color: $orange;
-      font-family: "DM Serif Display", serif;
+      font-family: $font-serif;
       font-size: 32px;
       text-align: right;
     }
   }
-
-  
 }
 
-.testimonials{
+// -------------------------------
+// TESTIMONIALS
+// -------------------------------
+.testimonials {
   background-color: $green;
 
-  .box{
+  .box {
     padding: 4rem;
     display: grid;
-    grid-template-columns: repeat(3 ,1fr);
-    grid-template-rows: 1fr 1fr;
-    row-gap: 4rem;
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 1rem;
+  }
+  
+  @media(max-width: 1200px){
+    .box{
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+  }
+
+  @media(max-width: 860px){
+    .box{
+      grid-template-columns: 1fr;
+    }
   }
 }
 
-.testimonial-card{
-  padding: 1rem;
+.testimonial-card {
+  padding: 2rem 1rem;
   background-color: $white;
-  border-radius: 12px;
+  border-radius: $card-radius;
 
-  div{
+  div {
     display: flex;
-    justify-content: start;
-    align-items: top;
-    padding-bottom: 1rem;
     gap: 1rem;
+    align-items: flex-start;
+    padding-bottom: 2rem;
 
-    img{
+    img {
       border: 2px solid $yellow;
-      border-radius: 12px;
+      border-radius: $card-radius;
       width: 64px;
     }
   }
 
-  p{
-    font-size: 14px;
-  }
+  p { font-size: $fs-p; }
 }
 
+// -------------------------------
+// ABOUT SECTION
+// -------------------------------
+.about {
+  padding: 2rem 0 1rem 0;
 
-.about{
-  padding: 2rem 0rem 1rem 0rem;
-  .box{
+  .box {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
   }
 
-  &-image{
+  &-image {
     padding: 2rem;
     position: relative;
 
-    &_front{
-      position: absolute;
-      top: 4rem;
-      left: 0rem;
-    }
-    &_back{
-      position: relative;
-      top: -3rem;
-      left: 6rem;
-    }
+    &_front { position: absolute; top: 4rem; left: 0; }
+    &_back  { position: relative; top: -3rem; left: 6rem; }
   }
-  article{
+
+  article {
     padding: 2rem;
     display: flex;
     flex-direction: column;
     max-width: 400px;
 
-    h1{
-      color: $orange;
-    }
-    h3{
-      color: $orange;
-      margin-top: -16px;
-    }
-    p{
-      font-size: 18px;
-      margin-top: auto;
-      letter-spacing: 1px;
-    }
+    h1, h3 { color: $orange; }
+    h3 { margin-top: -16px; }
+    p { margin-top: auto; }
   }
 
-  img{
-    border-radius: 12px;
+  img {
+    border-radius: $card-radius;
     max-width: 380px;
     aspect-ratio: 4/5;
     object-fit: cover;
   }
+
+  @media(max-width: 1200px){
+    &-image{
+      &_front{
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      &_back{
+        display: none;
+      }
+    } 
+
+    img{
+      width: 100%;
+    }
+  }
+
+  @media(max-width: 860px){
+    .box{
+      grid-template-columns: 1fr;
+      justify-items: center;
+      text-align: center;
+    }
+  }
 }
 
-#root{
+// -------------------------------
+// ROOT & FOOTER
+// -------------------------------
+#root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-footer{
+footer {
   margin-top: auto;
   background-color: $green;
-  section{
+
+  section {
     max-width: 1440px;
     margin: 0 auto;
     display: flex;
-    align-items: top;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 2rem;
-
-    > div{
-    display: flex;
     column-gap: 8rem;
 
-      >div{
-        p{
+    > div {
+      display: flex;
+      column-gap: 8rem;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+
+        p {
           color: $yellow;
           font-weight: bold;
-          font-family: "DM Serif Display", serif;
+          font-family: $font-serif;
           letter-spacing: 1px;
           font-size: 18px;
           margin-bottom: 1rem;
         }
+
+        ul {
+          list-style: none;
+          li {
+            margin-top: 0.25rem;
+            display: flex;
+            gap: 0.25rem;
+            align-items: center;
+            color: $white;
+          }
+          a {
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 0.25rem;
+
+            &:hover {
+              color: #333;
+            }
+          }
+        }
       }
+    }
+  }
 
-      ul{
-        list-style: none;
+  @media(max-width: 860px){
+    section{
+      flex-direction: column;
 
-        li{
-          margin-top: 0.25rem;
+      >div{
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
 
-        }
         li, a{
-          display: flex;
-          align-items: center;
-          justify-content: start;
-          gap: 0.25rem;
-          color: $white;
-        }
-
-        a:hover{
-          color: #333;
+          justify-content: center;
+          text-align: center;
         }
       }
     }
   }
 }
 
-.menu{
+// -------------------------------
+// MENU & RADIO
+// -------------------------------
+.menu {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 2rem 0; 
+  padding: 2rem 0;
   text-align: center;
 
-  &-list{
+  &-list {
     margin-top: 2.5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     row-gap: 4rem;
+    padding: 1rem;
+
+  }
+
+  @media(max-width: 1200px){
+    &-list{
+      grid-template-columns: 1fr 1fr;
+      justify-items: center;
+    }
+  }
+
+  @media(max-width: 860px){
+    &-list{
+      grid-template-columns: 1fr;
+    }
   }
 }
 
-.radio-list{
+.radio-list {
   display: flex;
   gap: 2rem;
   flex-wrap: wrap;
@@ -396,46 +511,46 @@ footer{
   justify-content: center;
 }
 
-.radio{
+.radio {
   margin-top: 1rem;
-  label{
+
+  label {
     padding: 0.5rem 1rem;
     border: 2px solid $dark;
-    border-radius: 12px;
+    border-radius: $card-radius;
     cursor: pointer;
     color: $dark;
     opacity: 0.8;
     font-weight: 500;
-    letter-spacing: 1px;
 
-    &:hover{
-      opacity: 1;
-    }
+    &:hover { opacity: 1; }
   }
 
-  input[type='radio']{
+  input[type='radio'] {
     display: none;
-    opacity: 0;
-    visibility: hidden;
   }
 
-  input[type='radio']:checked + label{
+  input[type='radio']:checked + label {
     opacity: 1;
     color: $orange;
     border-color: $orange;
   }
 }
 
-.reservation{
+// -------------------------------
+// RESERVATION FORM
+// -------------------------------
+.reservation {
   padding: 2rem;
-  .box{
+
+  .box {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     text-align: center;
   }
 
-  form{
+  form {
     margin: 0 auto;
     width: 100%;
     max-width: 760px;
@@ -443,92 +558,124 @@ footer{
     flex-direction: column;
     gap: 1.5rem;
 
-    >div{
+    > div {
       display: flex;
       gap: 1.5rem;
       align-items: center;
       justify-content: space-between;
     }
 
-    input[type='text'],input[type='email'],input[type='number'],input[type='tel'],input[type='date']{
-      font-size: 22px !important;
+    input[type='text'],
+    input[type='email'],
+    input[type='number'],
+    input[type='tel'],
+    input[type='date'] {
+      font-size: 22px;
       width: 100%;
       padding: 0.5rem;
       color: $dark;
       border: 3px solid $dark;
-      border-radius: 12px;
+      border-radius: $card-radius;
       background-color: $white;
       text-align: center;
-      font-family: "DM Serif Display", serif;
       letter-spacing: 2px;
 
-      &:active, &:focus{
+      &:focus {
         outline: none;
         border-color: $orange;
         color: $orange;
       }
     }
 
-    input[type='submit']{
+    button[type='submit'] {
       padding: 0.75rem;
       font-size: 22px;
       letter-spacing: 2px;
       color: $white;
       background-color: $dark;
-      border-radius: 12px;
+      border-radius: $card-radius;
       cursor: pointer;
       border: none;
 
-      &:hover{
-        opacity: 0.8;
-      }
+      &:hover { opacity: 0.8; }
+      &:active { background-color: $orange; opacity: 1; }
+    }
+  }
 
-      &:active{
-        background-color: $orange;
-        opacity: 1;
+  @media(max-width: 860px){
+    h1{
+      font-size: 36px;
+      text-align: center;
+    }
+    form{
+      >div{
+        flex-direction: column;
+        align-items: stretch;
       }
     }
   }
 }
-.select{
+
+// -------------------------------
+// SELECT COMPONENT
+// -------------------------------
+.select {
   position: relative;
-  .select-btn{
-    width: 100%;
-    border: 3px solid #333;
+
+  .select-btn {
+    width: 100% !important;
+    border: 3px solid $dark;
     padding: 0.75rem;
     font-size: 22px;
     background-color: $white;
-    border-radius: 12px;
+    border-radius: $card-radius;
     color: $dark;
 
-    &:hover{
-      cursor: pointer;
-      opacity: 0.8;
-    }
-
-    
+    &:hover { cursor: pointer; opacity: 0.8; }
   }
 }
-.open{
-  border-color: $orange;
-  color: $orange;
-}
 
-.select-dropdown{
-  position: absolute !important;top: 100%;
+.open { border-color: $orange; color: $orange; }
+
+.select-dropdown {
+  position: absolute !important;
+  top: 100%;
   z-index: 88888;
   width: 100%;
-  border-radius: 12px;
+  border-radius: $card-radius;
   overflow: hidden;
   border: 1px solid $dark;
 }
 
-.select-option{
+.select-option {
   font-size: 22px;
   padding: 0.5rem;
   background-color: $white;
   cursor: pointer;
-  &:hover{
-    color: $orange;
-  }
+
+  &:hover { color: $orange; }
+}
+
+// -------------------------------
+// FORM MESSAGES
+// -------------------------------
+.form-message {
+  margin: 1rem auto;
+  width: 100%;
+  max-width: 760px;
+  border-radius: $card-radius;
+  padding: 1rem;
+  font-size: 16px;
+  color: $white;
+  border: 2px solid;
+}
+
+.form-error {
+  background-color: rgba(180, 44, 39, 0.644);
+  border-color: rgba(255, 99, 71, 0.8);
+}
+
+.form-success {
+  background-color: rgba(129, 185, 43, 0.6);
+  border-color: rgba(28, 43, 7, 0.2);
 }

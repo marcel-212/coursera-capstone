@@ -5,21 +5,24 @@ import data from '/src/data/menu.json'
 
 const Menu = () => {
     const [current, setCurrent] = useState('lunch');
-    const [filtered, setFiltered] = useState(data.filter((item)=> item == 'lunch'));
+    const [filtered, setFiltered] = useState(data.filter((item)=> item.category == 'lunch'));
 
     useEffect(() => {
         let temp = data.filter((item)=> item.category == current);
         setFiltered(temp);
-        console.log(temp)
     },[current])
     
     return ( 
-        <section className="menu">
+        <section className="menu" aria-label="Menu section">
             <h1>MENU</h1>
-            <MenuRadio list={['breakfast', 'lunch', 'dinner', 'desserts', 'drinks']} current={current} setCurrent={setCurrent}/>
+            <MenuRadio
+                list={['breakfast', 'lunch', 'dinner', 'desserts', 'drinks']}
+                current={current}
+                setCurrent={setCurrent}
+            />
             <div className="menu-list">
-                {filtered.map(item => (
-                    <MenuCard key={item.id} {...item}/>
+                {filtered.map((item, index) => (
+                <MenuCard key={item.id} {...item} />
                 ))}
             </div>
         </section>

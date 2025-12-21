@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "image": "/breakfast/shakshouka.jpg",
     "title": "Shakshouka",
     "description": "Poached eggs in a rich tomato and pepper sauce.",
@@ -8,6 +9,7 @@
     "category": "breakfast"
   },
   {
+    "id": 2,
     "image": "/breakfast/pancakes.jpg",
     "title": "Pancakes with blueberries",
     "description": "Fluffy pancakes topped with fresh blueberries.",
@@ -16,6 +18,7 @@
     "category": "breakfast"
   },
   {
+    "id": 3,
     "image": "/breakfast/full_english.jpg",
     "title": "Full English",
     "description": "Classic hearty English breakfast plate.",
@@ -24,6 +27,7 @@
     "category": "breakfast"
   },
   {
+    "id": 4,
     "image": "/breakfast/musli.jpg",
     "title": "Musli",
     "description": "Healthy cereal mix with fruit and nuts.",
@@ -32,6 +36,7 @@
     "category": "breakfast"
   },
   {
+    "id": 5,
     "image": "/breakfast/eggs.jpg",
     "title": "Sunny side up",
     "description": "Eggs fried sunny side up, simple and classic.",
@@ -40,6 +45,7 @@
     "category": "breakfast"
   },
   {
+    "id": 6,
     "image": "/breakfast/sandwich.png",
     "title": "Sandwiches",
     "description": "Freshly made breakfast sandwiches.",
@@ -48,6 +54,7 @@
     "category": "breakfast"
   },
   {
+    "id": 7,
     "image": "/lunch/bibimbap.jpg",
     "title": "Bibimbap",
     "description": "Korean rice bowl with vegetables and egg.",
@@ -56,6 +63,7 @@
     "category": "lunch"
   },
   {
+    "id": 8,
     "image": "/lunch/ceasar_salad.jpg",
     "title": "Ceasar's salad",
     "description": "Crisp romaine with creamy Caesar dressing.",
@@ -64,6 +72,7 @@
     "category": "lunch"
   },
   {
+    "id": 9,
     "image": "/lunch/fish_with_salad.jpg",
     "title": "Fish with salad",
     "description": "Grilled fish served with fresh salad.",
@@ -72,6 +81,7 @@
     "category": "lunch"
   },
   {
+    "id": 10,
     "image": "/lunch/greek_salad.jpg",
     "title": "Greek salad",
     "description": "Refreshing salad with feta and olives.",
@@ -80,6 +90,7 @@
     "category": "lunch"
   },
   {
+    "id": 11,
     "image": "/lunch/kebap.jpg",
     "title": "Kebap",
     "description": "Grilled meat served with spices and sauce.",
@@ -88,6 +99,7 @@
     "category": "lunch"
   },
   {
+    "id": 12,
     "image": "/lunch/panini.jpg",
     "title": "Panini",
     "description": "Warm pressed sandwich with melted cheese.",
@@ -96,6 +108,7 @@
     "category": "lunch"
   },
   {
+    "id": 13,
     "image": "/desserts/mille_feuille.jpg",
     "title": "Strawberry Mille-feuille",
     "description": "Layered pastry with cream and strawberries.",
@@ -104,6 +117,7 @@
     "category": "desserts"
   },
   {
+    "id": 14,
     "image": "/desserts/tiramisu.jpg",
     "title": "Tiramisu",
     "description": "Classic Italian coffee-flavored dessert.",
@@ -112,6 +126,7 @@
     "category": "desserts"
   },
   {
+    "id": 15,
     "image": "/desserts/chocolate_parfait.jpg",
     "title": "Chocolate Parfait",
     "description": "Rich layered chocolate dessert.",
@@ -120,6 +135,7 @@
     "category": "desserts"
   },
   {
+    "id": 16,
     "image": "/desserts/strawberry_crepes.jpg",
     "title": "Strawberry Crepes",
     "description": "Thin crepes filled with strawberries.",
@@ -128,6 +144,7 @@
     "category": "desserts"
   },
   {
+    "id": 17,
     "image": "/desserts/chocolate_ice.jpg",
     "title": "Chocolate cake with ice cream",
     "description": "Warm chocolate cake with vanilla ice cream.",
@@ -136,6 +153,7 @@
     "category": "desserts"
   },
   {
+    "id": 18,
     "image": "/dinner/fish_and_fries.jpg",
     "title": "Fish and Fries",
     "description": "Crispy fried fish with golden fries.",
@@ -144,6 +162,7 @@
     "category": "dinner"
   },
   {
+    "id": 19,
     "image": "/dinner/golobki.jpg",
     "title": "Gołąbki",
     "description": "Cabbage rolls stuffed with meat and rice.",
@@ -152,6 +171,7 @@
     "category": "dinner"
   },
   {
+    "id": 20,
     "image": "/dinner/hungarian_goulash.jpg",
     "title": "Goulash",
     "description": "Slow-cooked stew with paprika and beef.",
@@ -160,6 +180,7 @@
     "category": "dinner"
   },
   {
+    "id": 21,
     "image": "/dinner/penne_alla_vodka.png",
     "title": "Penne alla vodka",
     "description": "Creamy tomato pasta with a vodka kick.",
@@ -168,6 +189,7 @@
     "category": "dinner"
   },
   {
+    "id": 22,
     "image": "/dinner/pierogi.jpg",
     "title": "Pierogi",
     "description": "Traditional filled dumplings, pan-fried.",
@@ -176,6 +198,7 @@
     "category": "dinner"
   },
   {
+    "id": 23,
     "image": "/dinner/ramen.jpg",
     "title": "Ramen",
     "description": "Japanese noodle soup with rich broth.",
@@ -184,6 +207,7 @@
     "category": "dinner"
   },
   {
+    "id": 24,
     "image": "/dinner/schnitzel.jpg",
     "title": "Schnitzel",
     "description": "Breaded cutlet fried until golden.",
@@ -192,6 +216,7 @@
     "category": "dinner"
   },
   {
+    "id": 25,
     "image": "/drinks/kombucha.jpg",
     "title": "Kombucha",
     "description": "Refreshing fermented tea drink.",
@@ -200,6 +225,7 @@
     "category": "drinks"
   },
   {
+    "id": 26,
     "image": "/drinks/coffee.jpg",
     "title": "Coffee",
     "description": "Freshly brewed hot coffee.",
@@ -208,6 +234,7 @@
     "category": "drinks"
   },
   {
+    "id": 27,
     "image": "/drinks/tea.jpg",
     "title": "Tea",
     "description": "Hot tea with a soothing aroma.",
@@ -216,6 +243,7 @@
     "category": "drinks"
   },
   {
+    "id": 28,
     "image": "/drinks/beer.jpg",
     "title": "Beer",
     "description": "Chilled locally brewed beer.",
@@ -224,6 +252,7 @@
     "category": "drinks"
   },
   {
+    "id": 29,
     "image": "/drinks/water.jpg",
     "title": "Water",
     "description": "Still mineral water, served cold.",

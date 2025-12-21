@@ -26,7 +26,7 @@ Repo contains
 2. Run -> npm install
 3. Run tests with npx vitest
    - there should be 17 test files with 43 tests inside
-4. To see the site either use npm run dev or go to -> ""
+4. To see the site either use npm run dev or go to -> "https://marcel-212.github.io/little-lemon/"
 
 ## Available Scripts
 
